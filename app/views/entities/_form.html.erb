@@ -1,0 +1,9 @@
+<%= form_with model: @entity, url: group_entities_path do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+  
+   <%= f.label :amount %>
+   <%= f.number_field :amount %>
+  
+   <%= f.submit %>
+<% end %>
