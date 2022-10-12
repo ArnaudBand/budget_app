@@ -6,6 +6,6 @@ class User < ApplicationRecord
          :confirmable
   validates :name, presence: true
 
-  has_many :lists
+  has_many :entities
   has_many :groups
 end
