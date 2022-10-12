@@ -1,7 +1,10 @@
 class Group < ApplicationRecord
-  validates :name, presence: true
-  validates :icon, presence: true
-
   belongs_to :user
-  has_and_belongs_to_many :lists
+  has_and_belongs_to_many :entities
+
+  validates :name, :icon, presence: true
+
+  def total_amount
+    entities.sum(:amount)
+  end
 end
