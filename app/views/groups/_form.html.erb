@@ -1,9 +1,12 @@
-<%= form_with model: @group do |f| %>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
-  
-   <%= f.label :icon %>
-   <%= f.text_field :icon %>
-  
-   <%= f.submit %>
-<% end %>
+<%= render 'shared/nav' %>
+<div class="form">
+   <%= form_with model: @group do |f| %>
+      <div class="field">
+      <%= f.text_field :name, placeholder: "Name", class: "field__input" %>
+
+      <%= f.select :icon, @icons.map { |i| [i.to_s, i.to_s] }, class: "field__icon" %>
+      </div>
+   
+      <%= f.submit 'Add new category', class: "field__btn" %>
+   <% end %>
+</div>

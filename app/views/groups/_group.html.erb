@@ -1,9 +1,16 @@
-<p>
-  <strong>Name:</strong>
-  <%= group.name %>
-</p>
+<% @groups.each do |group|%>
+  <a href="/groups/<%= group.id %>/entities" class="group__flex">
+    <span class="group__icon">
+      <%= group.icon %>
+    </span>
+    <div class="group__item_right">
+      <span class="group__name">
+        <%= group.name %>
+      </span>
+      <span class="group__sum">
+        $ <%= group.total_amount %>
+      </span>
+    </div>
+  </a>
+<% end %>
 
-<p>
-  <strong>Icon:</strong>
-  <%= group.icon %>
-</p>
