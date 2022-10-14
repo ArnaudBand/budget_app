@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    # binding.pry
+    @icons = Group.icon_list
   end
 
   def show; end
