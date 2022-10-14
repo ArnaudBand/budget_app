@@ -19,6 +19,8 @@ gem 'devise'
 
 gem 'cancancan'
 
+gem 'font-awesome-sass', '~> 6.2.0'
+
 gem 'pry'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
