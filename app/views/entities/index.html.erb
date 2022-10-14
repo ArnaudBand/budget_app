@@ -1,1 +1,19 @@
-<%= render @entities %>
+<%= render 'shared/navbar' %>
+<div class="group__background">
+<div class="group__flex">
+  <span class="group__icon"><%= @group.icon %></span>
+
+  <div class="group__item_right">
+    <span class="group__name"><%= @group.name %></span>
+    <span class="group__sum">$ <%= @group.total_amount %></span>
+  </div>
+</div>
+<% if @entities.empty? %>
+  <p>There are no entities yet.</p>
+<% else %>
+  <%= render @entities %>  
+<% end %>
+  <div class="groups__btn">
+    <%= link_to 'Add Expense', new_group_entity_path, class: "groups__link" %>
+  </div>
+</div>
