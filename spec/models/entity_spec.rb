@@ -2,12 +2,13 @@ require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
   let(:user) do
-    usr = User.create(name: 'John Doe', email: 'john@mail.com', password: '123456', password_confirmation: '123456')
+    usr = User.new(name: 'John Doe', email: 'john@mail.com', password: '123456', password_confirmation: '123456')
+    usr.confirm
     usr.save
     return usr
   end
   let(:group) do
-    grp = Group.create(name: 'Group 1', icon: 'icon', user_id: user.id)
+    grp = Group.create(name: 'Group 1', icon: 'icon', user_id: user)
     grp.save
     return grp
   end
