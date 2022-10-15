@@ -9,11 +9,11 @@
   </div>
 </div>
 <% if @entities.empty? %>
-  <p>There are no entities yet.</p>
+  <p class="group__empty">There are no expenses yet.</p>
 <% else %>
   <%= render @entities %>  
 <% end %>
   <div class="groups__btn">
-    <%= link_to 'Add Expense', new_group_entity_path, class: "groups__link" %>
+    <%= link_to 'Add new expense', new_group_entity_path, class: "groups__link" %>
   </div>
 </div>

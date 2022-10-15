@@ -2,8 +2,9 @@
 <div class="form">
    <%= form_with model: @group do |f| %>
       <div class="field">
+      <%= f.label :name, class: 'hidden' %>
       <%= f.text_field :name, placeholder: "Name", class: "field__input" %>
-
+      <%= f.label :icon, class: 'hidden' %>
       <%= f.select :icon, @icons.map { |i| [i.to_s, i.to_s] }, class: "field__icon" %>
       </div>
    
