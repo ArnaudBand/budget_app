@@ -1,0 +1,11 @@
+<%= render 'shared/nav' %>
+<div class="group__background">
+    <% if @groups.empty? %>
+      <p class="group__empty">There are no groups yet.</p>
+    <% else %>
+      <%= render 'group' %>
+    <% end %>
+  <div class="groups__btn">
+    <%= link_to 'Create a group', new_group_path, class: "groups__link" %>
+  </div>
+</div>

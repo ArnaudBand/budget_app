@@ -1,0 +1,9 @@
+<nav class="nav_bar">
+  <a href="/groups" class="nav_bar__logo"><i class="fa-solid fa-angle-left"></i></a>
+  <h1>Category</h1>
+  <ul class="nav_bar__links">
+    <% if user_signed_in? %>
+        <%= button_to image_tag('logout.svg', width:"30"), destroy_user_session_path, method: :delete, data: { turbo: false }, class: "nav_bar__btn" %>
+    <% end %>
+  </ul>
+</nav> 
