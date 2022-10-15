@@ -42,6 +42,13 @@ To get a local copy up and running follow these simple steps:
 
 `rails s`
 
+- Run the test using this following command:
+
+`
+- rspec spec/models
+- rspec spec/system
+- rspec spec/request`
+
 #### Author
 
 *Bandonkeye Arnaud*
@@ -63,6 +70,10 @@ Give a star if you like this project!
 #### Acknowledgments
 
 [Microverse](https://www.microverse.org/) for the motivation.
+
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
+The [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/) of the design requires that you give appropriate credit to the author.
 
 #### License
 
