@@ -9,6 +9,10 @@ Budget app is about building a mobile web application where you can manage your 
 - gem 'rspec'
 - gem 'sass-rails'
 
+### Presentation
+
+[Video](https://www.loom.com/share/711cc33bc1644273b2a30b881b96c54d)
+
 ### Live 
 
 [budgetapp](https://budget-app-arnaud.herokuapp.com/)
