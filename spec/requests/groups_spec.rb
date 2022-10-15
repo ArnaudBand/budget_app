@@ -1,9 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
-  describe 'GET /index' do
+  let(:user) do
+    usr = User.new(name: 'John Doe', email: 'john@mail.com', password: '123456', password_confirmation: '123456')
+    usr.save
+    return usr
+  end
+
+  before(:each) do
+    login_as(user)
+  end
+
+  after(:each) do
+    logout
+  end
+
+  describe 'GET /' do
     it 'returns http success' do
-      get '/groups/index'
+      get '/groups'
       expect(response).to have_http_status(:success)
     end
   end
@@ -11,20 +25,6 @@ RSpec.describe 'Groups', type: :request do
   describe 'GET /new' do
     it 'returns http success' do
       get '/groups/new'
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe 'GET /show' do
-    it 'returns http success' do
-      get '/groups/show'
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe 'GET /create' do
-    it 'returns http success' do
-      get '/groups/create'
       expect(response).to have_http_status(:success)
     end
   end
