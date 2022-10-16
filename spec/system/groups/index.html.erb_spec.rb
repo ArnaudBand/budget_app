@@ -4,7 +4,6 @@ require_relative '../shared_file'
 RSpec.describe 'Groups', type: :system do
   before(:each) do
     @user = User.new(name: 'Arnaud', email: 'arnaud@mail.com', password: '123456', password_confirmation: '123456')
-    @user.confirm
     @user.save
     @group = Group.new(name: 'Housing', icon: '✈️', user: @user)
     @group.save

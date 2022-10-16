@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe 'Entities', type: :request do
   let(:user) do
     usr = User.new(name: 'John Doe', email: 'john@mail.com', password: '123456', password_confirmation: '123456')
-    usr.confirm
     usr.save
     return usr
   end
